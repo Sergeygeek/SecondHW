@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sixth Task</title>
+</head>
+<body>
+<script>
+    let amountOfMoney =
+        +prompt('Введите сумму, которую вы бы хотели положить в банк');
+
+    /**
+     * Function shows correct message to user how much money user put in a bank
+     * @param {number} num
+     */
+    function showMsg(num) {
+        let endOfNum = num % 10;
+        let wooden = 'рубл';
+
+        if((num % 100 <= 14 && num % 100 >= 11) || (endOfNum >= 5 && endOfNum
+            <= 9) || endOfNum === 0) {
+            wooden += 'ей';
+        } else if(endOfNum >= 2 && endOfNum <= 4) {
+            wooden += 'я';
+        } else {
+            wooden += 'ь';
+        }
+
+        alert(`Ваша сумма в ${num} ${wooden} успешно зачислена`)
+    }
+
+    if (!isNaN(amountOfMoney)) {
+        showMsg(amountOfMoney);
+    } else {
+        alert('Необходимо ввести корректное число');
+    }
+</script>
+</body>
+</html>

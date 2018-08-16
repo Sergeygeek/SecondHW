@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fifth Task</title>
+</head>
+<body>
+<script>
+    /**
+     * Function returns the sum of two numbers
+     * @param {number} a - The first number
+     * @param {number} b - The second number
+     * @returns {number} - The sum
+     */
+    const add = (a, b) => a + b;
+
+    /**
+     * Function returns the subtraction of two numbers
+     * @param {number} a - The first number
+     * @param {number} b - The second number
+     * @returns {number} - The subtraction
+     */
+    const reduce = (a, b) => a - b;
+
+    /**
+     * Function returns the division of two numbers
+     * @param {number} a - The first number
+     * @param {number} b - The second number
+     * @returns {number} - The division
+     */
+    const divide = (a, b) => a / b;
+
+    /**
+     * Function returns the multiplication of two numbers
+     * @param {number} a - The first number
+     * @param {number} b - The second number
+     * @returns {number} - The multiplication
+     */
+    const multiply = (a, b) => a * b;
+
+    /**
+     * Function operates with two number
+     * @param {number} arg1 - The first number
+     * @param {number} arg2 - The second number
+     * @param {string} operation - Operation
+     * @returns {number} - the result
+     */
+    function mathOperation(arg1, arg2, operation) {
+        switch(operation) {
+            case 'add':
+                return add(arg1, arg2);
+            case 'reduce':
+                return reduce(arg1, arg2);
+            case 'divide':
+                return divide(arg1, arg2);
+            case 'multiply':
+                return multiply(arg1, arg2);
+        }
+    }
+
+
+</script>
+</body>
+</html>
