@@ -6,34 +6,42 @@
 </head>
 <body>
 <script>
-    let amountOfMoney =
+    let amount =
         +prompt('Введите сумму, которую вы бы хотели положить в банк');
 
     /**
      * Function shows correct message to user how much money user put in a bank
      * @param {number} num
+     * @param {string} one - correct word for 1
+     * @param {string} two - correct word for 2
+     * @param {string} five - correct word for 5
+     * @returns {string} - declination word
      */
-    function showMsg(num) {
+    function getCorrectWord(num, one, two, five) {
         let endOfNum = num % 10;
-        let wooden = 'рубл';
 
         if((num % 100 <= 14 && num % 100 >= 11) || (endOfNum >= 5 && endOfNum
             <= 9) || endOfNum === 0) {
-            wooden += 'ей';
+            return five;
         } else if(endOfNum >= 2 && endOfNum <= 4) {
-            wooden += 'я';
+            return two;
         } else {
-            wooden += 'ь';
+            return five;
         }
-
-        alert(`Ваша сумма в ${num} ${wooden} успешно зачислена`)
     }
 
-    if (!isNaN(amountOfMoney)) {
-        showMsg(amountOfMoney);
+    let one = prompt('Введите склонение слова для 1');
+    let two = prompt('Введите склонение слово для количества 2');
+    let five = prompt('Введите склонение слова для количества 5');
+
+    if (!isNaN(amount)) {
+        let correctWord = getCorrectWord(amount, one, two, five);
+        console.log(`Вы положили ${amount} ${correctWord} в банк`)
     } else {
         alert('Необходимо ввести корректное число');
     }
+
+
 </script>
 </body>
 </html>
